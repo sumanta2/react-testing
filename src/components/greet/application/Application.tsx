@@ -10,7 +10,7 @@ export const Application = () => {
           </div>
           <div>
             <label htmlFor="bio">Bio</label>
-            {/* <textarea id="bio" /> */}
+            <textarea id="bio" />
           </div>
           <div>
             <label htmlFor="job-location">Job location</label>
@@ -33,4 +33,9 @@ export const Application = () => {
         </form>
       </>
     );
-  };
+};
+  
+
+// vdo 19
+
+// here i used two different tag(input and textarea) which not accept by getByRole so 
