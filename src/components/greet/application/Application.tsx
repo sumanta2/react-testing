@@ -8,6 +8,8 @@ export const Application = () => {
           <div>
             <label htmlFor="name">Name</label>
             <input type="text" id="name" placeholder="FullName" value="Vishwas" onChange={() => { }}  />
+            <span title="close">X</span>
+            <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
           </div>
           <div>
             <label htmlFor="bio">Bio</label>

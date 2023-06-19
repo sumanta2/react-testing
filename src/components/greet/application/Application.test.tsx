@@ -17,7 +17,16 @@ describe("Application", () => {
         expect(sectionHeading).toBeInTheDocument()
 
 
-        const paragraph = screen.getByText("All fields are mandatory") //it check "All fields are mandatory" Paragraph/String present in the DOM or not
+        const paragraphElement = screen.getByText("All fields are mandatory") //it check "All fields are mandatory" Paragraph/String present in the DOM or not
+        expect(paragraphElement).toBeInTheDocument()
+
+
+        const closeElement = screen.getByTitle("close");
+        expect(closeElement).toBeInTheDocument();
+
+
+        const imageElement = screen.getByAltText("a person with a laptop") //it check "a person with a laptop" Image/String present in the DOM or not
+        expect(imageElement).toBeInTheDocument()
 
 
         const nameElement = screen.getByRole("textbox", {
@@ -116,5 +125,21 @@ describe("Application", () => {
     basically it track the value attribute value of the element
 
     if i used this method to track a element in that element must readonly="true " property or implement onChange event
+
+*/
+
+/*
+
+    vdo 24
+    getByText() return the element that has the given alt text
+    this method only supports elements which accept an alt attribute like <img>, <input>, ,area> or custom HTML elements
+
+*/
+
+/*
+
+    vdo 25
+    getByTitle() return the element that has the matching title attribute
+
 
 */
