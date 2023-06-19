@@ -3,10 +3,11 @@ export const Application = () => {
       <>
         <h1>Job application form</h1>
         <h2>Section 1</h2>
+        <p>All fields are mandatory</p>
         <form>
           <div>
             <label htmlFor="name">Name</label>
-            <input type="text" id="name"  />
+            <input type="text" id="name" placeholder="FullName" value="Vishwas" onChange={() => { }}  />
           </div>
           <div>
             <label htmlFor="bio">Bio</label>

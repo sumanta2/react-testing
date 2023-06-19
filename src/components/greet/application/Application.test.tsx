@@ -17,6 +17,9 @@ describe("Application", () => {
         expect(sectionHeading).toBeInTheDocument()
 
 
+        const paragraph = screen.getByText("All fields are mandatory") //it check "All fields are mandatory" Paragraph/String present in the DOM or not
+
+
         const nameElement = screen.getByRole("textbox", {
             name: "Name",     //here also write "Level 2" which indicate it is H2 tag
         });
@@ -26,6 +29,12 @@ describe("Application", () => {
             selector: "input",
         });
         expect(nameElement2).toBeInTheDocument();
+
+        const nameElement3 = screen.getByPlaceholderText("FullName");
+        expect(nameElement3).toBeInTheDocument();
+
+        const nameElement4 = screen.getByDisplayValue("Vishwas");
+        expect(nameElement4).toBeInTheDocument();
 
         const bioElement = screen.getByRole("textbox", {
             name: "Bio",
@@ -85,5 +94,27 @@ describe("Application", () => {
      const nameElement2 = screen.getByLabelText("Name", {     //This method select Element based on Labeled Text
             selector: "input",
         });  here "input" is the type of the tag which i target
+
+*/
+
+/*
+    vdo21
+    getPlaceholderText() method select the html element based on placeholder text property of an element
+
+*/
+
+/* 
+    vdo 22
+    getByText() search element based on textContent present in a specific tag/node
+        it also used to find paragraph div or span element
+*/
+
+
+/*
+    vdo 23
+    getByDisplayValue()  return the input textarea, or select element that has the matching display value 
+    basically it track the value attribute value of the element
+
+    if i used this method to track a element in that element must readonly="true " property or implement onChange event
 
 */
