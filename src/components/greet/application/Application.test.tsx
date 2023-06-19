@@ -29,6 +29,10 @@ describe("Application", () => {
         expect(imageElement).toBeInTheDocument()
 
 
+        const customElement = screen.getByTestId("custom-element");
+        expect(customElement).toBeInTheDocument();
+
+
         const nameElement = screen.getByRole("textbox", {
             name: "Name",     //here also write "Level 2" which indicate it is H2 tag
         });
@@ -141,5 +145,10 @@ describe("Application", () => {
     vdo 25
     getByTitle() return the element that has the matching title attribute
 
+*/
+
+/*
+    vdo 26
+    getByTestId() return the element that has the matching data-testid attribute
 
 */
